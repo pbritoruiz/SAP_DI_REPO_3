@@ -1,5 +1,4 @@
 {
-    "properties": {},
     "description": "",
     "processes": {
         "python3operator1": {
@@ -16,7 +15,7 @@
                 ],
                 "generation": 1,
                 "config": {
-                    "script": "def t1():\n    message = \"Versao 2\"\n    api.send(\"output\", message)\n\napi.add_timer(\"1s\", t1)"
+                    "script": "def gen():\n    counter = 0\n    for i in range(0, 3):\n        api.send(\"output\", counter)\n\napi.add_generator(gen)"
                 },
                 "additionaloutports": [
                     {
@@ -58,6 +57,7 @@
     ],
     "inports": {},
     "outports": {},
+    "properties": {},
     "metadata": {
         "generation": 1
     }
